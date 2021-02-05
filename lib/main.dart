@@ -1,11 +1,13 @@
 
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import 'cls.dart';
 
 
 void main() {
   runApp(MyApp());
 }
+String val="Exit";
 
 class MyApp extends StatefulWidget {
   @override
@@ -16,7 +18,12 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   int t=0;
 
-  List<String> abc = ["hey my name is jatin","I do study in College"];
+  List<data> abc = [
+    data(roll: 1713310100,name:'Jatin Chaudhary'),
+    data(roll: 1713310158,name:'Prateek Churasiya'),
+    data(roll: 1713310106,name:'Khanak Gupta'),
+    data(roll: 1713310160,name:'Priyanshu Kumar'),
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -58,11 +65,9 @@ class _MyAppState extends State<MyApp> {
               mainAxisSize: MainAxisSize.max,
               crossAxisAlignment: CrossAxisAlignment.start,
 
-          children: abc.map((e) =>  Text("$e") ).toList()+[ Text("hey")],
+          children: abc.map((e) =>  Text("Roll: ${e.roll}  Name: ${e.name}") ).toList()+[ Text("") ,Text(val),],
         ),),
       ),
-
-
 
 
     );
