@@ -16,6 +16,8 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   int t=0;
 
+  List<String> abc = ["hey my name is jatin","I do study in College"];
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -23,7 +25,7 @@ class _MyAppState extends State<MyApp> {
 
       home: Scaffold(
 
-        backgroundColor: Colors.black45,
+        backgroundColor: Colors.lightGreen,
 
         appBar: AppBar(
 
@@ -35,7 +37,7 @@ class _MyAppState extends State<MyApp> {
                       ),
 
           centerTitle: true,
-          backgroundColor: Colors.white12,
+          backgroundColor: Colors.black87,
 
           elevation: 0,
         ),
@@ -56,24 +58,7 @@ class _MyAppState extends State<MyApp> {
               mainAxisSize: MainAxisSize.max,
               crossAxisAlignment: CrossAxisAlignment.start,
 
-
-          children: [
-
-            Text(" "),
-            Text(" "),
-            Text("DATA",style: TextStyle(color: Colors.white60),),
-            Text("Current temperature : $t",style: TextStyle(color: Colors.white60),),
-            Text(" "),
-            FlatButton(onPressed: () { setState(() {
-              t--;
-            });},
-              child: Icon(Icons.adjust_sharp), color: Colors.teal,onLongPress: (){setState(() {
-                t++;
-              });} ,),
-
-
-
-          ],
+          children: abc.map((e) =>  Text("$e") ).toList()+[ Text("hey")],
         ),),
       ),
 
