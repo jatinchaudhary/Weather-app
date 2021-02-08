@@ -23,7 +23,7 @@ class _MyAppState extends State<MyApp> {
   String ass="";
   String locate="";
   String view="";
-  String icon="";
+  String icon="//cdn.weatherapi.com/weather/64x64/night/113.png";
 
   var input=new TextEditingController();
 
@@ -61,7 +61,7 @@ class _MyAppState extends State<MyApp> {
           this.temp=0;
           this.location="";
           this.view="";
-          this.icon="";
+          this.icon="//cdn.weatherapi.com/weather/64x64/night/113.png";
         });
       }
     }
@@ -75,16 +75,16 @@ class _MyAppState extends State<MyApp> {
 
       home:
         Container(
-        decoration: BoxDecoration(
-        image: DecorationImage(
-        image: NetworkImage("https://i.pinimg.com/originals/aa/8d/a9/aa8da9413fe57e4e64ff50141ad77435.jpg"), fit: BoxFit.cover)),
+        //decoration: BoxDecoration(
+        //image: DecorationImage(
+       // image: , fit: BoxFit.cover)),
 
 
 
 
       child:Scaffold(
 
-        backgroundColor: Colors.blueAccent,
+       // backgroundColor: Colors.blueAccent,
 
         appBar: AppBar(
 
@@ -92,6 +92,7 @@ class _MyAppState extends State<MyApp> {
 
           centerTitle: true,
           backgroundColor: Colors.black87,
+
 
           elevation: 0,
         ),
@@ -112,6 +113,8 @@ class _MyAppState extends State<MyApp> {
               children: [
 
                 Image.network("http:"+ icon, height: 100, width: 200,),
+
+                Image.asset("image/image1.jpeg"),
 
                 TextField(
                   controller: input,
