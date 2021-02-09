@@ -1,10 +1,5 @@
-import 'dart:collection';
-import 'dart:ui';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:http/http.dart' as http;
-import 'cls.dart';
 import 'dart:convert';
 import 'package:geolocator/geolocator.dart';
 
@@ -109,11 +104,11 @@ class _MyAppState extends State<MyApp> {
 
         appBar: AppBar(
           title: Text(
-            "Weather Update",
+            "Weather",
             style: TextStyle(
-                letterSpacing: 5, wordSpacing: 8, fontWeight: FontWeight.bold),
+                letterSpacing: 1, fontWeight: FontWeight.bold,fontSize: 25),
           ),
-          centerTitle: true,
+          //centerTitle: true,
           backgroundColor: Colors.blue[800],
           elevation: 0,
         ),
@@ -141,10 +136,11 @@ class _MyAppState extends State<MyApp> {
                 ),
               ),
               SizedBox(
-                height: 20,
+                height: 10,
               ),
               Row(
                 children: [
+                  SizedBox(width: 20,),
                   Icon(Icons.whatshot),
                   Text(" Temperature        $temp \u2103"),
                 ],
@@ -152,6 +148,7 @@ class _MyAppState extends State<MyApp> {
               Divider(),
               Row(
                 children: [
+                  SizedBox(width: 20,),
                   Icon(Icons.ac_unit_sharp),
                   Text(" Condition             $view"),
                 ],
@@ -159,6 +156,7 @@ class _MyAppState extends State<MyApp> {
               Divider(),
               Row(
                 children: [
+                  SizedBox(width: 20,),
                   Icon(Icons.all_out_rounded),
                   Text(" Humidity              " + humidity.toString()),
                 ],
@@ -166,6 +164,7 @@ class _MyAppState extends State<MyApp> {
               Divider(),
               Row(
                 children: [
+                  SizedBox(width: 20,),
                   Icon(Icons.speed),
                   Text(" Wind speed         " + windSpeed.toString()),
                 ],
@@ -173,6 +172,7 @@ class _MyAppState extends State<MyApp> {
               Divider(),
               Row(
                 children: [
+                  SizedBox(width: 20,),
                   Icon(Icons.text_rotation_angleup),
                   Text(" Wind degree        " + windDegree.toString()),
                 ],
@@ -180,6 +180,7 @@ class _MyAppState extends State<MyApp> {
               Divider(),
               Row(
                 children: [
+                  SizedBox(width: 20,),
                   Icon(Icons.remove_red_eye),
                   Text(" Visibility               " + visKm.toString() + " km"),
                 ],
@@ -187,6 +188,7 @@ class _MyAppState extends State<MyApp> {
               Divider(),
               Row(
                 children: [
+                  SizedBox(width: 20,),
                   Icon(Icons.hot_tub_rounded),
                   Text(" UV radiation         " + uv.toString()),
                 ],
